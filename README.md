@@ -1,3 +1,10 @@
+# stock-buying-react-app
+This is the wireframe for the App 
+![wireframe](./wireframe/stocktradingapp.png)
+
+## Purpose
+To measure how much stock can currently be bought with 5k of US currency
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
