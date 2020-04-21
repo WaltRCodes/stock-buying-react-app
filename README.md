@@ -4,6 +4,11 @@
 
 Those interested in becoming investors might not feel comfortable investing real money on the stock market. Therefore, this application would allow the user to invest fake money in a fake environment built off of real data in order to make the user more comfortable with investing
 
+## API
+This is the API I will use for my project
+
+https://iexcloud.io/
+
 ## Wireframe 
 This is the wireframe for the App 
 
