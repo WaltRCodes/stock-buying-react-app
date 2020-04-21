@@ -8,8 +8,20 @@ export default class Information extends Component {
           data: [''],
           balance:5000 
         }
-        
-      }
+        this.buyStock = this.buyStock.bind(this);
+        this.takeSymbol = this.takeSymbol.bind(this);
+        this.takeQty = this.takeQty.bind(this);
+  }
+
+  buyStock(event){
+    event.preventDefault();
+  }
+
+  takeSymbol(event){
+  }
+
+  takeQty(event){
+  }
 
     componentDidMount() {
         this.callApi();
