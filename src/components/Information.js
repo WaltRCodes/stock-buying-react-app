@@ -5,6 +5,13 @@ export default class Information extends Component {
     componentDidMount() {
         
     }
+    async callApi() {
+        try {
+          
+        } catch (e) {
+          console.log(e);
+        }
+      }
   
   render() {
     return (
