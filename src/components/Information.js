@@ -5,7 +5,8 @@ export default class Information extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [''] 
+          data: [''],
+          balance:5000 
         }
         
       }
@@ -17,6 +18,7 @@ export default class Information extends Component {
         try {
             const response = await axios.get('https://cloud.iexapis.com/stable/tops?token='+IEXCLOUD_PUBLIC_KEY);
             console.log(response.data);
+            this.setState({data:response.data});
         } catch (e) {
           console.log(e);
         }
