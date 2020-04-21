@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {IEXCLOUD_PUBLIC_KEY} from './key';
 export default class Information extends Component {
     constructor(props) {
         super(props);
@@ -28,7 +27,7 @@ export default class Information extends Component {
     }
     async callApi() {
         try {
-            const response = await axios.get('https://cloud.iexapis.com/stable/tops?token='+IEXCLOUD_PUBLIC_KEY);
+            const response = await axios.get('https://cloud.iexapis.com/stable/tops?token='+process.env.REACT_APP_KEY);
             console.log(response.data);
             this.setState({data:response.data});
         } catch (e) {
