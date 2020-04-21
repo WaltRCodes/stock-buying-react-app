@@ -24,7 +24,7 @@ Portfolio Cells - house the stock portfolio information
 
 Transaction Cells - house the transaction information
 
-### This app is also as the following state components:
+### This app is also has the following state components:
 
 Login Form - this takes in the user info and checks it
 
