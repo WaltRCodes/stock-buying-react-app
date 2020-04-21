@@ -5,7 +5,9 @@ export default class Information extends Component {
         super(props);
         this.state = {
           data: [''],
-          balance:5000 
+          balance:5000,
+          orders:[''],
+          portfolio:'' 
         }
         this.buyStock = this.buyStock.bind(this);
         this.takeSymbol = this.takeSymbol.bind(this);
