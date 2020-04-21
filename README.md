@@ -7,7 +7,7 @@ Those interested in becoming investors might not feel comfortable investing real
 ## Wireframe 
 This is the wireframe for the App 
 
-This app is comprised of the following stateless components:
+#### This app is comprised of the following stateless components:
 
 Login - Displays the Login page
 
@@ -19,7 +19,7 @@ Portfolio Cells - house the stock portfolio information
 
 Transaction Cells - house the transaction information
 
-This app is also as the following state components:
+#### This app is also as the following state components:
 
 Login Form - this takes in the user info and checks it
 
