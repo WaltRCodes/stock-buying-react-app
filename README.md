@@ -12,7 +12,7 @@ https://iexcloud.io/
 ## Wireframe 
 This is the wireframe for the App 
 
-#### This app is comprised of the following stateless components:
+### This app is comprised of the following stateless components:
 
 Login - Displays the Login page
 
@@ -24,7 +24,7 @@ Portfolio Cells - house the stock portfolio information
 
 Transaction Cells - house the transaction information
 
-#### This app is also as the following state components:
+### This app is also as the following state components:
 
 Login Form - this takes in the user info and checks it
 
@@ -46,9 +46,9 @@ To measure how much stock can currently be bought with 5k of US currency
 
 People interested in learning how to manage specfic amounts of money
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
