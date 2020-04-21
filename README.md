@@ -10,16 +10,25 @@ This is the wireframe for the App
 This app is comprised of the following stateless components:
 
 Login - Displays the Login page
+
 Registration - Displays the Registration page 
+
 Account Balance - Displays the current amount of cash in the user’s account
+
 Portfolio Cells - house the stock portfolio information
+
 Transaction Cells - house the transaction information
 
 This app is also as the following state components:
+
 Login Form - this takes in the user info and checks it
+
 Registration Form - this captures the user info to store for later use
+
 Purchase Form - this captures the order info
+
 Portfolio - Displays a list of the users stock portfolios
+
 Transaction - Displays the users transaction history
 
 
