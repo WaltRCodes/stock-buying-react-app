@@ -1,9 +1,9 @@
 import React from 'react';
-function PortfolioOrderForm() {
+function PortfolioOrderForm(props) {
   return (
     <div>
         <form>
-            
+        
         </form>
     </div>
   );
