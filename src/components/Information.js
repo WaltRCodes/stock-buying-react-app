@@ -39,7 +39,7 @@ export default class Information extends Component {
     };
     for(let info of this.state.data){
         if(newOrder.Symbol===info.symbol){
-            newOrder.price=info.lastSalePrice;
+            newOrder.price=parseInt(info.lastSalePrice);
             break;
         }
     }
@@ -61,7 +61,7 @@ export default class Information extends Component {
         let portfolioHTML = newOrders.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
 
         //update in state: orders, balance, portfolio
-        this.setState({balance:newBalance.toFixed(2),orders:newOrders,portfolioTotal:ownedTotal.toFixed(2),portfolioSection: portfolioHTML,TransactionSection:orderHTML});
+        this.setState({balance:newBalance.toFixed(2),orders:newOrders,portfolioTotal:ownedTotal,portfolioSection: portfolioHTML,TransactionSection:orderHTML});
     }
   }
 
