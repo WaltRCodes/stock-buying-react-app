@@ -6,7 +6,7 @@ export default class Information extends Component {
         super(props);
         this.state = {
           data: [{}],
-          balance:5000,
+          balance:0,
           orders:[''],
           portfolio:'',
           symbol:'',
@@ -38,6 +38,8 @@ export default class Information extends Component {
     //console.log(newOrder.price);
     if(newOrder.price===undefined){
      this.setState({stopOrderBlock:<p>Please enter a valid Symbol</p>});
+    } else if(newOrder.price*newOrder.Qty>this.state.balance){
+        this.setState({stopOrderBlock:<p>You dont have enough funds for this purchase</p>});
     }
   }
 
@@ -46,7 +48,7 @@ export default class Information extends Component {
   }
 
   takeQty(event){
-    this.setState({qty: event.target.value});
+    this.setState({qty: parseInt(event.target.value)});
   }
 
     componentDidMount() {
