@@ -14,7 +14,8 @@ export default class Information extends Component {
           currentOrder:{
               Symbol:'',
               Qty:''
-          } 
+          },
+          stopOrderBlock:'' 
         }
         this.buyStock = this.buyStock.bind(this);
         this.takeSymbol = this.takeSymbol.bind(this);
