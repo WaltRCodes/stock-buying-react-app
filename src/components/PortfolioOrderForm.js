@@ -17,6 +17,7 @@ function PortfolioOrderForm(props) {
               <input type="submit" value="Submit"/>
           </label>
         </form>
+        <div>{props.stopOrderBlock}</div>
     </div>
   );
 }

@@ -24,6 +24,10 @@ export default class Information extends Component {
 
   buyStock(event){
     event.preventDefault();
+    let newOrder = {
+        Symbol:this.state.symbol,
+        Qty:this.state.qty
+    };
   }
 
   takeSymbol(event){
@@ -51,7 +55,7 @@ export default class Information extends Component {
     return (
       <div>
         <h1>Information</h1>
-        <PortfolioOrderForm takeSymbol={this.takeSymbol} takeQty={this.takeQty} buyStock={this.buyStock}/>
+        <PortfolioOrderForm takeSymbol={this.takeSymbol} takeQty={this.takeQty} buyStock={this.buyStock} stopOrderBlock={this.state.stopOrderBlock}/>
       </div>
       
     )
