@@ -94,6 +94,7 @@ export default class Information extends Component {
         <BrowserRouter>
             <Navbar />
             <Route path="/Portfolio" render={() => <div>
+                <h1>Portfolio</h1>
                 <PortfolioOrderForm balance={this.state.balance} takeSymbol={this.takeSymbol} takeQty={this.takeQty} buyStock={this.buyStock} stopOrderBlock={this.state.stopOrderBlock}/>
                 <PortfolioSection portfolioTotal={this.state.portfolioTotal} portfolioSection={this.state.portfolioSection}/>
             </div>} />
