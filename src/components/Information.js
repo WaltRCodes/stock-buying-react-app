@@ -23,11 +23,6 @@ export default class Information extends Component {
           TransactionSection:[],
           symbol:'',
           qty:'',
-          currentOrder:{
-              Symbol:'',
-              Qty:'',
-              price:0
-          },
           stopOrderBlock:'' 
         }
         this.buyStock = this.buyStock.bind(this);
