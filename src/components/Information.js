@@ -39,6 +39,10 @@ export default class Information extends Component {
             break;
         }
     }
+    //console.log(newOrder.price);
+    if(newOrder.price===undefined){
+     this.setState({stopOrderBlock:<p>Please enter a valid Symbol</p>});
+    }
   }
 
   takeSymbol(event){
