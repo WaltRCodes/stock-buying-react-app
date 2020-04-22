@@ -12,7 +12,7 @@ export default class Information extends Component {
           orders:[],
           portfolioSection:'',
           portfolioTotal:0,
-          TransactionSection:'',
+          TransactionSection:[],
           symbol:'',
           qty:'',
           currentOrder:{
@@ -47,8 +47,11 @@ export default class Information extends Component {
     } else {
         let newOrders = this.state.orders;
         newOrders.push(newOrder);
-        let orderHTML = newOrders.map(order => <OrderCell qty={order.Qty} symbol={order.Symbol} total={order.Symbol*order.Qty} date={new Date()} />);
-        
+        let orderHTML = newOrders.map(order => <OrderCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty} date={new Date().toUTCString()} />);
+        // let orderHTML = this.state.TransactionSection;
+        // for(let order of newOrders){
+        //     orderHTML.push(<OrderCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty} date={new Date().toUTCString()} />);
+        // }
         let newBalance = this.state.balance - (newOrder.price*newOrder.Qty);
         //update in state: orders, balance, portfolio
         this.setState({balance:newBalance,orders:newOrders,TransactionSection:orderHTML});
