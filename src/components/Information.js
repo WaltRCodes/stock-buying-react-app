@@ -50,7 +50,7 @@ export default class Information extends Component {
     return (
       <div>
         <h1>Information</h1>
-        <PortfolioOrderForm />
+        <PortfolioOrderForm takeSymbol={this.takeSymbol}/>
       </div>
       
     )
