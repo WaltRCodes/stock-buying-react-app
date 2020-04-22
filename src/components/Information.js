@@ -5,6 +5,7 @@ import OrderCell from './OrderCell';
 import TransactionSection from './TransactionSection';
 import PortfolioCell from './PortfolioCell';
 import PortfolioSection from './PortfolioSection';
+import Navbar from './Navbar';
 import {
     BrowserRouter,
     Switch,
