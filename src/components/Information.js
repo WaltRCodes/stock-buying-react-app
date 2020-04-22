@@ -7,7 +7,13 @@ export default class Information extends Component {
           data: [''],
           balance:5000,
           orders:[''],
-          portfolio:'' 
+          portfolio:'',
+          symbol,
+          qty,
+          currentOrder:{
+              Symbol:'',
+              Qty:''
+          } 
         }
         this.buyStock = this.buyStock.bind(this);
         this.takeSymbol = this.takeSymbol.bind(this);
@@ -19,9 +25,11 @@ export default class Information extends Component {
   }
 
   takeSymbol(event){
+    this.setState({symbol: event.target.value});
   }
 
   takeQty(event){
+    this.setState({qty: event.target.value});
   }
 
     componentDidMount() {
