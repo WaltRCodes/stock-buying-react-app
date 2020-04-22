@@ -89,6 +89,9 @@ export default class Information extends Component {
     return (
       <div>
         <h1>Information</h1>
+        <BrowserRouter>
+        
+        </BrowserRouter>
         <PortfolioOrderForm balance={this.state.balance} takeSymbol={this.takeSymbol} takeQty={this.takeQty} buyStock={this.buyStock} stopOrderBlock={this.state.stopOrderBlock}/>
         <TransactionSection TransactionSection={this.state.TransactionSection}/>
         <PortfolioSection portfolioTotal={this.state.portfolioTotal} portfolioSection={this.state.portfolioSection}/>
