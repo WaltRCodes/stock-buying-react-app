@@ -5,7 +5,11 @@ export default class Information extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [''],
+          data: [{
+            Symbol:'',
+            Qty:'',
+            price:0
+        }],
           balance:5000,
           orders:[''],
           portfolio:'',
@@ -29,11 +33,13 @@ export default class Information extends Component {
         Symbol:this.state.symbol,
         Qty:this.state.qty
     };
+    for(let info of this.state.data){
 
+    }
   }
 
   takeSymbol(event){
-    this.setState({symbol: event.target.value});
+    this.setState({symbol: event.target.value.toUpperCase()});
   }
 
   takeQty(event){
