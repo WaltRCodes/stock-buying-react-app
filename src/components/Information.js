@@ -3,6 +3,7 @@ import axios from 'axios';
 import PortfolioOrderForm from './PortfolioOrderForm';
 import OrderCell from './OrderCell';
 import TransactionSection from './TransactionSection';
+import PortfolioCell from './PortfolioCell';
 export default class Information extends Component {
     constructor(props) {
         super(props);
