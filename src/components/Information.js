@@ -5,11 +5,7 @@ export default class Information extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          data: [{
-            Symbol:'',
-            Qty:'',
-            price:0
-        }],
+          data: [{}],
           balance:5000,
           orders:[''],
           portfolio:'',
