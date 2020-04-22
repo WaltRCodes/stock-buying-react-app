@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PortfolioOrderForm from './PortfolioOrderForm';
 import OrderCell from './OrderCell';
+import TransactionSection from './TransactionSection';
 export default class Information extends Component {
     constructor(props) {
         super(props);
