@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PortfolioOrderForm from './PortfolioOrderForm';
+import OrderCell from './OrderCell';
 export default class Information extends Component {
     constructor(props) {
         super(props);
@@ -45,7 +46,7 @@ export default class Information extends Component {
     } else {
         let orders = this.state.orders;
         orders.push(newOrder);
-        
+        //let orderHTML = orders.map(order => );
         //update in state: orders, balance, portfolio
         
     }
