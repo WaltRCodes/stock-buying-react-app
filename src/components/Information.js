@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PortfolioOrderForm from './PortfolioOrderForm';
 export default class Information extends Component {
     constructor(props) {
         super(props);
@@ -8,8 +9,8 @@ export default class Information extends Component {
           balance:5000,
           orders:[''],
           portfolio:'',
-          symbol,
-          qty,
+          symbol:'',
+          qty:'',
           currentOrder:{
               Symbol:'',
               Qty:''
@@ -49,6 +50,7 @@ export default class Information extends Component {
     return (
       <div>
         <h1>Information</h1>
+        <PortfolioOrderForm />
       </div>
       
     )
