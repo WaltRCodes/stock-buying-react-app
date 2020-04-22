@@ -10,6 +10,7 @@ export default class Information extends Component {
           orders:[],
           portfolioSection:'',
           portfolioTotal:0,
+          TransactionSection:'',
           symbol:'',
           qty:'',
           currentOrder:{
@@ -44,7 +45,6 @@ export default class Information extends Component {
     } else {
         let orders = this.state.orders;
         orders.push(newOrder);
-        orders.map
         //update in state: orders, balance, portfolio
         
     }
