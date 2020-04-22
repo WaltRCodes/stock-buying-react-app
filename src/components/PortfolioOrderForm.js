@@ -13,6 +13,9 @@ function PortfolioOrderForm(props) {
               <input type="number" onChange={props.takeQty} placeholder="Qty"/>
               <br />
           </label>
+          <label>
+              <input type="submit" value="Submit"/>
+          </label>
         </form>
     </div>
   );
