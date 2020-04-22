@@ -2,6 +2,7 @@ import React from 'react';
 function PortfolioOrderForm(props) {
   return (
     <div>
+        <h3>{props.balance}</h3>
         <form onSubmit={props.buyStock}>
         <label>
               Symbol
