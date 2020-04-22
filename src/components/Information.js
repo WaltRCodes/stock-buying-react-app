@@ -5,6 +5,12 @@ import OrderCell from './OrderCell';
 import TransactionSection from './TransactionSection';
 import PortfolioCell from './PortfolioCell';
 import PortfolioSection from './PortfolioSection';
+import {
+    BrowserRouter,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 export default class Information extends Component {
     constructor(props) {
         super(props);
