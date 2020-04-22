@@ -56,10 +56,10 @@ export default class Information extends Component {
         // }
         let newBalance = this.state.balance - (newOrder.price*newOrder.Qty);
         let ownedTotal = this.state.portfolioTotal + (newOrder.price*newOrder.Qty);
-        let portfolio = newOrders.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
+        let portfolioHTML = newOrders.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
 
         //update in state: orders, balance, portfolio
-        this.setState({balance:newBalance,orders:newOrders,portfolioTotal:ownedTotal,TransactionSection:orderHTML});
+        this.setState({balance:newBalance,orders:newOrders,portfolioTotal:ownedTotal,portfolioSection: portfolioHTML,TransactionSection:orderHTML});
     }
   }
 
