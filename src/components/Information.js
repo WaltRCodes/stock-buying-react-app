@@ -6,8 +6,8 @@ export default class Information extends Component {
         super(props);
         this.state = {
           data: [{}],
-          balance:0,
-          orders:[''],
+          balance:5000,
+          orders:[],
           portfolio:'',
           symbol:'',
           qty:'',
