@@ -13,7 +13,8 @@ export default class Information extends Component {
           qty:'',
           currentOrder:{
               Symbol:'',
-              Qty:''
+              Qty:'',
+              price:0
           },
           stopOrderBlock:'' 
         }
@@ -28,6 +29,7 @@ export default class Information extends Component {
         Symbol:this.state.symbol,
         Qty:this.state.qty
     };
+
   }
 
   takeSymbol(event){
