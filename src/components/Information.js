@@ -40,6 +40,10 @@ export default class Information extends Component {
      this.setState({stopOrderBlock:<p>Please enter a valid Symbol</p>});
     } else if(newOrder.price*newOrder.Qty>this.state.balance){
         this.setState({stopOrderBlock:<p>You dont have enough funds for this purchase</p>});
+    } else {
+        let orders = this.state.orders;
+        orders.push(newOrder);
+        
     }
   }
 
