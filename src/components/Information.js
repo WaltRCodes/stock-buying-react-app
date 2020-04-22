@@ -45,6 +45,7 @@ export default class Information extends Component {
     } else {
         let orders = this.state.orders;
         orders.push(newOrder);
+        
         //update in state: orders, balance, portfolio
         
     }
