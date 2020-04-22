@@ -44,11 +44,13 @@ export default class Information extends Component {
     } else if(newOrder.price*newOrder.Qty>this.state.balance){
         this.setState({stopOrderBlock:<p>You dont have enough funds for this purchase</p>});
     } else {
-        let orders = this.state.orders;
-        orders.push(newOrder);
-        //let orderHTML = orders.map(order => );
-        //update in state: orders, balance, portfolio
+        let newOrders = this.state.orders;
+        newOrders.push(newOrder);
+        let orderHTML = newOrders.map(order => <OrderCell qty={order.Qty} symbol={order.Symbol} total={order.Symbol*order.Qty} date={new Date()} />);
         
+        let newBalance = this.state.balance - (newOrder.price*newOrder.Qty);
+        //update in state: orders, balance, portfolio
+        this.setState({balance:newBalance,orders:newOrders,TransactionSection:orderHTML});
     }
   }
 
