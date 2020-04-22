@@ -59,7 +59,7 @@ export default class Information extends Component {
         let portfolioHTML = newOrders.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
 
         //update in state: orders, balance, portfolio
-        this.setState({balance:newBalance,orders:newOrders,portfolioTotal:ownedTotal,portfolioSection: portfolioHTML,TransactionSection:orderHTML});
+        this.setState({balance:newBalance.toFixed(2),orders:newOrders,portfolioTotal:ownedTotal.toFixed(2),portfolioSection: portfolioHTML,TransactionSection:orderHTML});
     }
   }
 
@@ -90,6 +90,7 @@ export default class Information extends Component {
         <h1>Information</h1>
         <PortfolioOrderForm balance={this.state.balance} takeSymbol={this.takeSymbol} takeQty={this.takeQty} buyStock={this.buyStock} stopOrderBlock={this.state.stopOrderBlock}/>
         <TransactionSection TransactionSection={this.state.TransactionSection}/>
+        <PortfolioSection portfolioTotal={this.state.portfolioTotal} portfolioSection={this.state.portfolioSection}/>
       </div>
       
     )
