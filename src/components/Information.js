@@ -34,7 +34,10 @@ export default class Information extends Component {
         Qty:this.state.qty
     };
     for(let info of this.state.data){
-
+        if(newOrder.Symbol===info.symbol){
+            newOrder.price=info.lastSalePrice;
+            break;
+        }
     }
   }
 
