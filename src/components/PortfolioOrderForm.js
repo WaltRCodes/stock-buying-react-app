@@ -10,7 +10,7 @@ function PortfolioOrderForm(props) {
           </label>
           <label>
               Qty
-              <input type="text" onChange={props.takeQty} placeholder="Qty"/>
+              <input type="number" onChange={props.takeQty} placeholder="Qty"/>
               <br />
           </label>
         </form>
