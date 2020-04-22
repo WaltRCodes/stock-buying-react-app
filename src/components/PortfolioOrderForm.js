@@ -8,6 +8,10 @@ function PortfolioOrderForm(props) {
               <input type="text" onChange={props.takeSymbol} placeholder="Symbol"/>
               <br />
           </label>
+          <label>
+              Qty
+              <input type="text" onChange={props.takeQty} placeholder="Qty"/>
+          </label>
         </form>
     </div>
   );
