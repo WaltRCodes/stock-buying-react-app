@@ -11,6 +11,7 @@ function PortfolioOrderForm(props) {
           <label>
               Qty
               <input type="text" onChange={props.takeQty} placeholder="Qty"/>
+              <br />
           </label>
         </form>
     </div>
