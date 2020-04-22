@@ -4,6 +4,7 @@ import PortfolioOrderForm from './PortfolioOrderForm';
 import OrderCell from './OrderCell';
 import TransactionSection from './TransactionSection';
 import PortfolioCell from './PortfolioCell';
+import PortfolioSection from './PortfolioSection';
 export default class Information extends Component {
     constructor(props) {
         super(props);
