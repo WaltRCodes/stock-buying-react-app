@@ -58,7 +58,7 @@ export default class Information extends Component {
         let ownedTotal = this.state.portfolioTotal + (newOrder.price*newOrder.Qty);
 
         //update in state: orders, balance, portfolio
-        this.setState({balance:newBalance,orders:newOrders,TransactionSection:orderHTML});
+        this.setState({balance:newBalance,orders:newOrders,portfolioTotal:ownedTotal,TransactionSection:orderHTML});
     }
   }
 
