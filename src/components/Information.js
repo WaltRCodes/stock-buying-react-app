@@ -55,6 +55,7 @@ export default class Information extends Component {
         //     orderHTML.push(<OrderCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty} date={new Date().toUTCString()} />);
         // }
         let newBalance = this.state.balance - (newOrder.price*newOrder.Qty);
+        let ownedTotal = this.state.portfolioTotal + (newOrder.price*newOrder.Qty);
 
         //update in state: orders, balance, portfolio
         this.setState({balance:newBalance,orders:newOrders,TransactionSection:orderHTML});
