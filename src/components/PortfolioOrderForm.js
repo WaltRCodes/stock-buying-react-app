@@ -5,7 +5,7 @@ function PortfolioOrderForm(props) {
         <form>
         <label>
               Symbol
-              <input type="text" onChange={this.takeSymbol} placeholder="Symbol"/>
+              <input type="text" onChange={props.takeSymbol} placeholder="Symbol"/>
           </label>
         </form>
     </div>
