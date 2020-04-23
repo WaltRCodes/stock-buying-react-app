@@ -17,3 +17,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.main > a:link, a:visited {
+  text-decoration: none;
+}
+.main > a:hover{
+  text-decoration:underline;
+}
