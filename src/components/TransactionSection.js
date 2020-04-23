@@ -1,5 +1,5 @@
 import React from 'react';
-function TransactionSection(props) {
+const TransactionSection=(props)=> {
   return (
     <div>
         <h1>Transactions</h1>
