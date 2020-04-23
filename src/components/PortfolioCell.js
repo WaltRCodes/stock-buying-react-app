@@ -1,5 +1,5 @@
 import React from 'react';
-function PortfolioCell(props) {
+const PortfolioCell = (props) => {
   return (
     <div>
         <p>{props.qty} shares of {props.symbol} worth ${props.total}</p>
