@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { UserContext } from "../providers/UserProvider";
 import {auth} from "../firebase";
 
-function Navbar() {
+const Navbar = () => {
     const user = useContext(UserContext);
     const {displayName} = user;
   return (
