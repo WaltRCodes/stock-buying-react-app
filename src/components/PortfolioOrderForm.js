@@ -1,5 +1,5 @@
 import React from 'react';
-function PortfolioOrderForm(props) {
+const PortfolioOrderForm =(props)=> {
   return (
     <div>
         <h3>{props.balance}</h3>
