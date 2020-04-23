@@ -1,5 +1,5 @@
 import React from 'react';
-function PortfolioSection(props) {
+const PortfolioSection = (props) => {
   return (
     <div>
         <h3>${props.portfolioTotal}</h3>
