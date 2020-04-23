@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import './App.css';
+import './Styles/App.css';
 import UserProvider from "./providers/UserProvider";
 import Test from './components/Test';
 const App =()=> {
