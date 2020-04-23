@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from "react";
 import './App.css';
-import Information from './components/Information';
+import UserProvider from "./providers/UserProvider";
+import Test from './components/Test';
 function App() {
   return (
     <div>
-      <Information />
+      <UserProvider>
+        <Test />
+      </UserProvider>
       <a href="https://iexcloud.io">Data provided by IEX Cloud</a>
     </div>
   );
