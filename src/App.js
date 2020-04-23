@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import './App.css';
 import UserProvider from "./providers/UserProvider";
 import Test from './components/Test';
-function App() {
+const App =()=> {
   return (
     <div>
       <UserProvider>
