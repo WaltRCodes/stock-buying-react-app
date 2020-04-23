@@ -8,7 +8,7 @@ import {
   BrowserRouter,
   Route
 } from "react-router-dom";
-function Test() {
+const Test =()=> {
   const user = useContext(UserContext);
   return (
     user ?
