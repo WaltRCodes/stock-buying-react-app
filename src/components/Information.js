@@ -8,9 +8,7 @@ import PortfolioSection from './PortfolioSection';
 import Navbar from './Navbar';
 import {
     BrowserRouter,
-    Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
 export default class Information extends Component {
     constructor(props) {
