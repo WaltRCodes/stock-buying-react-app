@@ -29,7 +29,7 @@ const PasswordResetPage = () => {
       });
   };
   return (
-    <div>
+    <div className="main">
       <h1>
         Reset your Password
       </h1>

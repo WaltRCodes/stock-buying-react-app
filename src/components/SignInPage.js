@@ -30,7 +30,7 @@ const SignInPage = () => {
    
 
   return (
-    <div>
+    <div className="main">
       <h1>Sign In</h1>
       <div >
         {error !== null && <div>{error}</div>}
