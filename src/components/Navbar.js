@@ -12,7 +12,7 @@ const Navbar = () => {
         <p>Welcome {displayName}!</p>
         <Link to="/Portfolio">Portfolio</Link>
         <Link to="/Transactions">Transactions</Link>
-        <button onClick = {() => {auth.signOut()}}>Sign out</button>
+        <button className="custom" onClick = {() => {auth.signOut()}}>Sign out</button>
     </div>
   );
 }
