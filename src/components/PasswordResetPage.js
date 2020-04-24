@@ -7,15 +7,15 @@ const PasswordResetPage = () => {
   const [email, setEmail] = useState("");
   const [emailHasBeenSent, setEmailHasBeenSent] = useState(false);
   const [error, setError] = useState(null);
-
+{/* utilize state hooks to hold onto an email state, boolean for the email check, and an error */}
   const onChangeHandler = event => {
     const { name, value } = event.currentTarget;
-
+{/* This sets an email */}
     if (name === "userEmail") {
       setEmail(value);
     }
   };
-
+{/* utilizes firebase to send a reset email */}
   const sendResetEmail = event => {
     event.preventDefault();
     auth
@@ -28,6 +28,7 @@ const PasswordResetPage = () => {
         setError("Error resetting password");
       });
   };
+  {/* utilize state in order to decide which messages to display */}
   return (
     <div className="main">
       <h1>
