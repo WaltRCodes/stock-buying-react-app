@@ -8,8 +8,8 @@ const Navbar = () => {
     const user = useContext(UserContext);
     const {displayName} = user;
   return (
-    <div>
-        <p>{displayName}</p>
+    <div className="nav-bar">
+        <p>Welcome {displayName}!</p>
         <Link to="/Portfolio">Portfolio</Link>
         <Link to="/Transactions">Transactions</Link>
         <button onClick = {() => {auth.signOut()}}>Sign out</button>

@@ -23,3 +23,15 @@
 .main > a:hover{
   text-decoration:underline;
 }
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  font-size: larger;
+  justify-content: space-evenly;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  border: #1A7E43 solid 2px;
+  border-style: none none solid none;
+  background-color: aquamarine;
+}
