@@ -1,0 +1,13 @@
+if (user is logged in)
+    let them buy stock, see their transaction history, or see their portfolio
+    once the user is logged in, an API call is made to get the most recent stock data
+    that stock data is then used when the user makes purchases in order to calculate the total cost of the stock they are buying
+ if (user buys stock)
+    if (they have the money and have inputed the correct symbol to buy the stock)
+        let them buy stock
+        update their portfolio and order history with the info of the stock they just bought
+    else
+        output error message
+else
+    have the user create a login OR login
+ 
