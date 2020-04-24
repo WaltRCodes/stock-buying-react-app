@@ -1,7 +1,7 @@
 import React from 'react';
 const PortfolioSection = (props) => {
   return (
-    <div>
+    <div className="article order-holder">
         <h3>${props.portfolioTotal}</h3>
         <div>{props.portfolioSection}</div>
     </div>

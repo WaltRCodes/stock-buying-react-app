@@ -91,8 +91,8 @@ export default class Information extends Component {
         {/* https://reacttraining.com/react-router/web/api/Route/route-props */}
         <BrowserRouter>
             <Navbar />
-            <Route path="/Portfolio" render={() => <div>
-                <h1>Portfolio</h1>
+            <Route path="/Portfolio" render={() => <div className="parent">
+                <h1 className="title">Portfolio</h1>
                 <PortfolioOrderForm balance={this.state.balance} takeSymbol={this.takeSymbol} takeQty={this.takeQty} buyStock={this.buyStock} stopOrderBlock={this.state.stopOrderBlock}/>
                 <PortfolioSection portfolioTotal={this.state.portfolioTotal} portfolioSection={this.state.portfolioSection}/>
             </div>} />

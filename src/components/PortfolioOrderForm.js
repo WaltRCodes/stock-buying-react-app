@@ -1,7 +1,7 @@
 import React from 'react';
 const PortfolioOrderForm =(props)=> {
   return (
-    <div>
+    <div className="aside order-holder">
         <h3>{props.balance}</h3>
         <form onSubmit={props.buyStock}>
         <label>
