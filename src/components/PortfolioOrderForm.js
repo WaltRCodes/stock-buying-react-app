@@ -1,5 +1,6 @@
 import React from 'react';
 const PortfolioOrderForm =(props)=> {
+    {/* creates a form for the user to input the stock info that they are buying */}
   return (
     <div className="aside order-holder">
         <h3>{props.balance}</h3>
