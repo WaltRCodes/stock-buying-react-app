@@ -23,6 +23,10 @@ a:link, a:visited {
 a:hover{
   text-decoration:underline;
 }
+.center{
+  text-align: center;
+  width: 100%;
+}
 
 .nav-bar{
   display: flex;

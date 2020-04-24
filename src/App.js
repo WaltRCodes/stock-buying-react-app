@@ -9,7 +9,7 @@ const App =()=> {
       <UserProvider>
         <Test />
       </UserProvider>
-      <a href="https://iexcloud.io">Data provided by IEX Cloud</a>
+      <a className="center" href="https://iexcloud.io">Data provided by IEX Cloud</a>
     </div>
   );
 }

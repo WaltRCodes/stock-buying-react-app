@@ -4,6 +4,10 @@
 
 Those interested in becoming investors might not feel comfortable investing real money on the stock market. Therefore, this application would allow the user to invest fake money in a fake environment built off of real data in order to make the user more comfortable with investing
 
+## Deployed App
+
+[Here is a link to the stock app](https://stock-buying-react-app.netlify.app/ "My deployed app")
+
 ## API
 This is the API I will use for my project
 
