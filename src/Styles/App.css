@@ -17,10 +17,10 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.main > a:link, a:visited {
+a:link, a:visited {
   text-decoration: none;
 }
-.main > a:hover{
+a:hover{
   text-decoration:underline;
 }
 
@@ -38,4 +38,26 @@
 .custom{
   background-color: transparent;
   font-size: large;
+  border:none;
+}
+.custom:hover{
+  text-decoration:underline;
+}
+
+.cell-holder > p{
+  list-style: none;
+  border: 1px;
+  border-style: solid none solid none;
+  
+}
+.cell-holder{
+  padding: 10px;
+}
+.transaction-section{
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  background-size: 100vw 100vw;
+  transition: all 2s;
+  color:#1A7E43;
 }
