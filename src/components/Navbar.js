@@ -5,8 +5,10 @@ import { UserContext } from "../providers/UserProvider";
 import {auth} from "../firebase";
 
 const Navbar = () => {
+    {/* took the user info from context, spefically the name */}
     const user = useContext(UserContext);
     const {displayName} = user;
+    {/* displayed the name with links and a sign out button */}
   return (
     <div className="nav-bar">
         <p>Welcome {displayName}!</p>
