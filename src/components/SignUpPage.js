@@ -7,7 +7,8 @@ const SignUpPage = () => {
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [error, setError] = useState(null);
-
+{/* created state hooks to capture the email password displayname and error */}
+{/* created the login and generated a user document */}
   const createUserWithEmailAndPasswordHandler = async (event, email, password) => {
     event.preventDefault();
     try{
@@ -22,7 +23,7 @@ const SignUpPage = () => {
     setPassword("");
     setDisplayName("");
   };
-
+{/* set the email password and siplayname for the user */}
   const onChangeHandler = event => {
     const { name, value } = event.currentTarget;
 
@@ -34,7 +35,7 @@ const SignUpPage = () => {
       setDisplayName(value);
     }
   };
-
+{/* render the form that captures all the info */}
   return (
     <div className="main">
       <h1>Sign Up</h1>
