@@ -87,7 +87,6 @@ export default class Information extends Component {
   render() {
     return (
       <div>
-        <h1>Information</h1>
         {/* https://reacttraining.com/react-router/web/api/Route/route-props */}
         <BrowserRouter>
             <Navbar />
