@@ -17,6 +17,7 @@ export default class Information extends Component {
           data: [{}],
           balance:5000,
           orders:[],
+          portfolio:[],
           portfolioSection:[],
           portfolioTotal:0,
           TransactionSection:[],
@@ -56,7 +57,16 @@ export default class Information extends Component {
         // }
         let newBalance = this.state.balance - (newOrder.price*newOrder.Qty);
         let ownedTotal = this.state.portfolioTotal + (newOrder.price*newOrder.Qty);
-        let portfolioHTML = newOrders.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
+        
+        let newPortfolio = this.state.portfolio;
+        let found = newPortfolio.findIndex(stock => stock.Symbol===newOrder.Symbol);
+        //console.log(found);
+        if(found!=-1){
+            newPortfolio[found].Qty=newPortfolio[found].Qty+newOrder.Qty;
+        } else {
+            newPortfolio.push(newOrder);
+        }
+        let portfolioHTML = newPortfolio.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
 
         //update in state: orders, balance, portfolio
         this.setState({balance:newBalance.toFixed(2),orders:newOrders,portfolioTotal:ownedTotal,portfolioSection: portfolioHTML,TransactionSection:orderHTML});
@@ -77,7 +87,7 @@ export default class Information extends Component {
     async callApi() {
         try {
             const response = await axios.get('https://cloud.iexapis.com/stable/tops?token='+process.env.REACT_APP_KEY);
-            console.log(response.data);
+            //console.log(response.data);
             this.setState({data:response.data});
         } catch (e) {
           console.log(e);
