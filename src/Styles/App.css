@@ -35,3 +35,7 @@
   border-style: none none solid none;
   background-color: aquamarine;
 }
+.custom{
+  background-color: transparent;
+  font-size: large;
+}
