@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 const Test =()=> {
   const user = useContext(UserContext);
+  {/* check the user contect to see if a user is logged in, if not, display the login page info, otherwise display the stock pages */}
   return (
     user ?
     <Information />

@@ -3,7 +3,7 @@ import { auth, generateUserDocument } from "../firebase";
 
 
 export const UserContext = createContext({ user: null });
-
+{/* create the user context */}
 class UserProvider extends Component {
   state = {
     user: null
@@ -17,12 +17,12 @@ class UserProvider extends Component {
       this.setState({ user });
     });
 
-
+{/* checks to see if a userdocument is found on page load */}
   };
 
   render() {
     const { user } = this.state;
-
+{/* sets user to state */}
     return (
       <UserContext.Provider value={user}>
         {this.props.children}
