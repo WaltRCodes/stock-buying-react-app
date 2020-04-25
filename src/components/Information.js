@@ -95,7 +95,7 @@ export default class Information extends Component {
         } else {
           color='green';
         }
-        console.log(color);
+        //console.log(color);
         let portfolioHTML = newPortfolio.map(order => <PortfolioCell style={color} qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
 
         //update all the data we have into state
