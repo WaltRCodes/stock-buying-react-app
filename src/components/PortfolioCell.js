@@ -3,7 +3,7 @@ const PortfolioCell = (props) => {
     {/* display the portfolio info based on what stocks the user has */}
   return (
     <div>
-        <p>{props.qty} shares of {props.symbol} worth ${props.total}</p>
+        <p style={{color:props.style}}>{props.qty} shares of {props.symbol} worth ${props.total}</p>
     </div>
   );
 }

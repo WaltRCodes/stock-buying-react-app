@@ -6,6 +6,7 @@ import TransactionSection from './TransactionSection';
 import PortfolioCell from './PortfolioCell';
 import PortfolioSection from './PortfolioSection';
 import Navbar from './Navbar';
+import { alphavantage_KEY } from './key';
 import {
     BrowserRouter,
     Route
@@ -53,6 +54,19 @@ export default class Information extends Component {
         this.setState({stopOrderBlock:<p>You dont have enough funds for this purchase</p>});
     } else {
         {/* create an array of componenets holding the order info */}
+        let openingPrice = 0;
+        fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol="+newOrder.Symbol+"&apikey="+alphavantage_KEY)
+      .then(response => response.json()) 
+      .then(
+        result => {
+          let date = new Date(new Date().toLocaleDateString()).toISOString().substring(0,10);
+          //date = date.setDate(date.getDate()-1);
+          // console.log(date);
+          // console.log(result["Time Series (Daily)"][date]);
+          // console.log(result["Time Series (Daily)"][date]["1. open"]);
+          openingPrice = result["Time Series (Daily)"][date]["1. open"];
+        }
+      ).catch(e => console.log("there's a error", e))
         let newOrders = this.state.orders;
         newOrders.push(newOrder);
         let orderHTML = newOrders.map(order => <OrderCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty} date={new Date().toUTCString()} />);
@@ -72,7 +86,16 @@ export default class Information extends Component {
         } else {
             newPortfolio.push(newOrder);
         }
-        let portfolioHTML = newPortfolio.map(order => <PortfolioCell qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
+        let color ='';
+        if(openingPrice===newOrder.price){
+          color='grey';
+        } else if(openingPrice>newOrder.price){
+          color='red';
+        } else {
+          color='green';
+        }
+        console.log(color);
+        let portfolioHTML = newPortfolio.map(order => <PortfolioCell style={color} qty={order.Qty} symbol={order.Symbol} total={order.price*order.Qty}/>);
 
         //update all the data we have into state
         this.setState({balance:newBalance.toFixed(2),orders:newOrders,portfolioTotal:ownedTotal,portfolioSection: portfolioHTML,TransactionSection:orderHTML});
