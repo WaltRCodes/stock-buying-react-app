@@ -87,6 +87,7 @@ export default class Information extends Component {
             newPortfolio.push(newOrder);
         }
         let color ='';
+        //check how the days opening price compares to its current price
         if(openingPrice===newOrder.price){
           color='grey';
         } else if(openingPrice>newOrder.price){
